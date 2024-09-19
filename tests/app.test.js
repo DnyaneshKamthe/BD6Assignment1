@@ -67,8 +67,7 @@ describe("API testing", () => {
     })
 
     it("should not return show for invalid id", async()=>{
-        // let mockShow =  { showId: 1, title: 'The Lion King', theatreId: 1, time: '7:00 PM' };
-        // getShowById.mockReturnValue(mockShow);
+        getShowById.mockReturnValue(null);
         let result = await request(server).get("/shows/100");
         expect(result.statusCode).toBe(404)
         expect(result.body.message).toEqual('Show not found')
