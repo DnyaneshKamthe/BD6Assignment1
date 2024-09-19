@@ -94,4 +94,4 @@ app.post("/shows", (req, res) =>{
   }
 })
 
-module.exports = { app , getAllShows, getShowById, addShow }
+module.exports = { app , getAllShows, getShowById, addShow, validateShow }
